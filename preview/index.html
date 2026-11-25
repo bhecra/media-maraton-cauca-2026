@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Verificación rutas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>html,body,#map{height:100%;margin:0}#ui{position:absolute;top:10px;right:10px;z-index:1000;background:#fff;padding:8px 10px;font:13px system-ui;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.kmlbl{background:#1b2a6b;color:#fff;border-radius:50%;width:22px;height:22px;line-height:22px;text-align:center;font:bold 12px system-ui;border:2px solid #fff}
+.wplbl{background:#ff9800;color:#000;border-radius:50%;width:16px;height:16px;line-height:16px;text-align:center;font:bold 10px system-ui;border:1px solid #fff}</style></head>
+<body><div id="map"></div><div id="ui"></div>
+<script>
+const map=window.map=L.map('map').setView([2.4445,-76.606],16);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:20,attribution:'© OpenStreetMap'}).addTo(map);
+const colors=['#e3007a','#1b2a6b','#2e8b57','#ff7f00','#8b008b'];
+fetch('routes.geojson?'+Date.now()).then(r=>r.json()).then(fc=>{
+  const names=[...new Set(fc.features.map(f=>f.properties.route))];
+  const layers={};
+  names.forEach((n,i)=>{
+    const col=colors[i%colors.length];
+    const g=L.layerGroup();
+    fc.features.filter(f=>f.properties.route===n).forEach(f=>{
+      if(f.geometry.type==='LineString'){
+        const ll=f.geometry.coordinates.map(c=>[c[1],c[0]]);
+        L.polyline(ll,{color:col,weight:5,opacity:.85}).addTo(g);
+        L.circleMarker(ll[0],{radius:7,color:'#000',fillColor:'#0f0',fillOpacity:1}).addTo(g).bindTooltip('Salida');
+      } else if(f.properties.km!==undefined){
+        L.marker([f.geometry.coordinates[1],f.geometry.coordinates[0]],{icon:L.divIcon({className:'',html:'<div class="kmlbl" style="background:'+col+'">'+f.properties.km+'</div>',iconSize:[22,22],iconAnchor:[11,11]})}).addTo(g);
+      } else if(f.properties.wp!==undefined){
+        L.marker([f.geometry.coordinates[1],f.geometry.coordinates[0]],{icon:L.divIcon({className:'',html:'<div class="wplbl">'+f.properties.wp+'</div>',iconSize:[16,16],iconAnchor:[8,8]})}).addTo(g);
+      }
+    });
+    layers[n+' ('+(fc.features.find(f=>f.properties.route===n&&f.geometry.type==='LineString').properties.length/1000).toFixed(2)+' km)']=g;
+    const want=new URLSearchParams(location.search).get('show')||names[0]; if(n===want) g.addTo(map);
+  });
+  L.control.layers(null,layers,{collapsed:false}).addTo(map);
+});
+</script></body></html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recorridos Media Maratón del Cauca</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root{--rosa:#e3007a;--azul:#1b2a6b;--gris:#f3f4f6;--texto:#1f2937}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texto);background:#fff}
+  header{padding:18px 16px 10px;max-width:1100px;margin:0 auto}
+  h1{margin:0 0 4px;font-size:24px}
+  h1 span{color:var(--rosa)}
+  .sub{margin:0;color:#6b7280;font-size:14px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px 32px}
+  .tabs{display:flex;gap:8px;margin:14px 0 10px;flex-wrap:wrap}
+  .tabs button{border:2px solid var(--azul);background:#fff;color:var(--azul);font-weight:700;font-size:15px;padding:8px 18px;border-radius:999px;cursor:pointer}
+  .tabs button.on{background:var(--azul);color:#fff}
+  .tabs button:disabled{opacity:.4;cursor:not-allowed}
+  #map{height:62vh;min-height:380px;border-radius:12px;border:1px solid #e5e7eb}
+  .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}
+  .bar button,.bar a{border:0;background:var(--rosa);color:#fff;font-weight:700;padding:10px 16px;border-radius:8px;cursor:pointer;text-decoration:none;font-size:14px}
+  .bar button.sec{background:var(--gris);color:var(--texto)}
+  .bar select{padding:8px;border-radius:8px;border:1px solid #d1d5db;font-size:14px}
+  .stat{font-size:14px;color:#374151}
+  .stat b{font-size:18px;color:var(--azul)}
+  .leg{display:flex;gap:16px;font-size:13px;color:#374151;flex-wrap:wrap;margin:6px 0 14px}
+  .leg i{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:5px}
+  .note{font-size:13px;color:#6b7280;margin:8px 0 0}
+  .km{background:var(--azul);color:#fff;border-radius:50%;width:24px;height:24px;line-height:24px;text-align:center;font:700 12px system-ui;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+  .salida{background:#16a34a;color:#fff;border-radius:6px;padding:2px 6px;font:700 11px system-ui;white-space:nowrap;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+  .runner{width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid var(--rosa);box-shadow:0 0 0 3px rgba(227,0,122,.25)}
+  h2{font-size:18px;margin:26px 0 8px}
+  .guia{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .guia div{background:var(--gris);border-radius:10px;padding:12px 14px;font-size:13px}
+  .guia b{display:block;margin-bottom:4px;color:var(--azul)}
+  .guia ol{margin:0;padding-left:18px}
+  footer{font-size:12px;color:#9ca3af;text-align:center;padding:16px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Recorridos <span>Media Maratón del Cauca</span></h1>
+  <p class="sub">Popayán · Salida y llegada en el Parque Caldas · Elige tu distancia, recorre el mapa paso a paso y descarga el GPX para tu reloj.</p>
+</header>
+<div class="wrap">
+  <div class="tabs" id="tabs"></div>
+  <div id="map"></div>
+  <div class="bar">
+    <button id="play">▶ Recorrer</button>
+    <button id="reset" class="sec">↺ Reiniciar</button>
+    <label class="stat">Velocidad <select id="speed"><option value="1">1x</option><option value="2" selected>2x</option><option value="4">4x</option><option value="8">8x</option></select></label>
+    <span class="stat" id="prog"></span>
+    <a id="dl" href="#" download>⬇ Descargar recorrido (GPX)</a>
+  </div>
+  <div class="leg">
+    <span><i style="background:#16a34a"></i>Salida / Llegada</span>
+    <span><i style="background:var(--azul)"></i>Puntos kilométricos</span>
+    <span><i style="background:var(--rosa)"></i>Recorrido</span>
+  </div>
+  <p class="note">Recorrido sujeto a modificaciones. La ruta es una guía: sigue siempre la señalización y las indicaciones de la organización el día de la carrera. Trazado aproximado sobre OpenStreetMap a partir del mapa oficial publicado.</p>
+
+  <h2>Lleva el recorrido en tu reloj</h2>
+  <div class="guia">
+    <div><b>Garmin</b><ol><li>Descarga el GPX.</li><li>En Garmin Connect (web o app) ve a Entrenamiento → Trayectos → Importar.</li><li>Envía el trayecto al reloj y ábrelo desde Navegación → Trayectos.</li></ol></div>
+    <div><b>COROS</b><ol><li>Descarga el GPX.</li><li>En la app COROS: Perfil → Mis rutas → Importar.</li><li>Sincroniza y selecciona la ruta al iniciar la actividad.</li></ol></div>
+    <div><b>Suunto</b><ol><li>Descarga el GPX.</li><li>En Suunto App: Mapa → Rutas → Importar.</li><li>Activa “Usar en el reloj” y sincroniza.</li></ol></div>
+    <div><b>Polar</b><ol><li>Descarga el GPX.</li><li>En flow.polar.com: Favoritos → Importar ruta.</li><li>Sincroniza y elige la ruta antes de empezar.</li></ol></div>
+    <div><b>Amazfit (Zepp)</b><ol><li>Descarga el GPX.</li><li>En Zepp: Perfil → Mis rutas → Importar.</li><li>Sincroniza con el reloj.</li></ol></div>
+    <div><b>Apple Watch</b><ol><li>Descarga el GPX.</li><li>Ábrelo con WorkOutDoors o Footpath (apps de terceros).</li><li>Envíalo al reloj desde la app.</li></ol></div>
+  </div>
+</div>
+<footer>Mapa © OpenStreetMap contribuyentes · Leaflet</footer>
+<script>
+/*__DATA__*/
+const map = L.map('map', {scrollWheelZoom: true});
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '© OpenStreetMap'}).addTo(map);
+let layer = null, runner = null, cur = null, anim = null, idx = 0, cum = [];
+const tabs = document.getElementById('tabs');
+DATA.forEach((r, i) => {
+  const b = document.createElement('button'); b.textContent = r.key; b.onclick = () => show(i); tabs.appendChild(b);
+});
+['10K', '21K'].forEach(k => { if (!DATA.find(r => r.key === k)) { const b = document.createElement('button'); b.textContent = k + ' (pronto)'; b.disabled = true; tabs.appendChild(b); } });
+function hav(a, b) { const R = 6371000, toR = Math.PI / 180, dLa = (b[0] - a[0]) * toR, dLo = (b[1] - a[1]) * toR, h = Math.sin(dLa / 2) ** 2 + Math.cos(a[0] * toR) * Math.cos(b[0] * toR) * Math.sin(dLo / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); }
+function show(i) {
+  stop(); cur = DATA[i]; idx = 0;
+  [...tabs.children].forEach((b, j) => b.classList.toggle('on', j === i));
+  if (layer) layer.remove();
+  layer = L.layerGroup().addTo(map);
+  const line = L.polyline(cur.coords, {color: '#e3007a', weight: 5, opacity: .9}).addTo(layer);
+  L.polyline(cur.coords, {color: '#fff', weight: 9, opacity: .6}).addTo(layer).bringToBack();
+  L.marker(cur.coords[0], {icon: L.divIcon({className: '', html: '<div class="salida">SALIDA / LLEGADA</div>', iconSize: [110, 20], iconAnchor: [55, 10]}), zIndexOffset: 500}).addTo(layer).bindPopup('Parque Caldas · Salida y llegada');
+  cur.kms.forEach(k => L.marker([k[1], k[2]], {icon: L.divIcon({className: '', html: '<div class="km">' + k[0] + '</div>', iconSize: [24, 24], iconAnchor: [12, 12]})}).addTo(layer).bindPopup('Km ' + k[0]));
+  runner = L.marker(cur.coords[0], {icon: L.divIcon({className: '', html: '<div class="runner"></div>', iconSize: [18, 18], iconAnchor: [9, 9]}), zIndexOffset: 1000}).addTo(layer);
+  cum = [0]; for (let j = 1; j < cur.coords.length; j++) cum.push(cum[j - 1] + hav(cur.coords[j - 1], cur.coords[j]));
+  map.fitBounds(line.getBounds(), {padding: [30, 30]});
+  document.getElementById('prog').innerHTML = '<b>' + (cur.length / 1000).toFixed(2) + ' km</b> · 0,00 km';
+  const dl = document.getElementById('dl'); dl.href = URL.createObjectURL(new Blob([gpx(cur)], {type: 'application/gpx+xml'})); dl.download = cur.file;
+}
+function gpx(r) {
+  const w = [`  <wpt lat="${r.coords[0][0]}" lon="${r.coords[0][1]}"><name>Salida / Llegada - Parque Caldas</name></wpt>`]
+    .concat(r.kms.map(k => `  <wpt lat="${k[1]}" lon="${k[2]}"><name>Km ${k[0]}</name></wpt>`)).join('\n');
+  const pts = r.coords.map(c => `      <trkpt lat="${c[0]}" lon="${c[1]}"></trkpt>`).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="mapa-mmc" xmlns="http://www.topografix.com/GPX/1/1">\n  <metadata><name>${r.name}</name><desc>${r.desc}</desc></metadata>\n${w}\n  <trk><name>${r.name}</name><trkseg>\n${pts}\n    </trkseg></trk>\n</gpx>\n`;
+}
+function step() {
+  const sp = +document.getElementById('speed').value;
+  idx = Math.min(idx + sp, cur.coords.length - 1);
+  runner.setLatLng(cur.coords[idx]);
+  document.getElementById('prog').innerHTML = '<b>' + (cur.length / 1000).toFixed(2) + ' km</b> · ' + (cum[idx] / 1000).toFixed(2).replace('.', ',') + ' km';
+  if (idx >= cur.coords.length - 1) { stop(); return; }
+  anim = setTimeout(step, 120);
+}
+function stop() { if (anim) clearTimeout(anim); anim = null; document.getElementById('play').textContent = '▶ Recorrer'; }
+document.getElementById('play').onclick = () => { if (anim) { stop(); } else { if (idx >= cur.coords.length - 1) idx = 0; document.getElementById('play').textContent = '❚❚ Pausar'; step(); } };
+document.getElementById('reset').onclick = () => { stop(); idx = 0; runner.setLatLng(cur.coords[0]); document.getElementById('prog').innerHTML = '<b>' + (cur.length / 1000).toFixed(2) + ' km</b> · 0,00 km'; };
+show(0);
+</script>
+</body>
+</html>
