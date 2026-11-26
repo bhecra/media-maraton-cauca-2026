@@ -6,6 +6,9 @@
 <title>Recorridos Media Maratón del Cauca</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&display=swap&text=datecuenta">
 <style>
   :root{--rosa:#e3007a;--azul:#1b2a6b;--gris:#f3f4f6;--texto:#1f2937}
   *{box-sizing:border-box}
@@ -38,12 +41,34 @@
   .guia b{display:block;margin-bottom:4px;color:var(--azul)}
   .guia ol{margin:0;padding-left:18px}
   footer{font-size:12px;color:#9ca3af;text-align:center;padding:16px}
+  footer a{color:#6b7280}
+  .colab{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;width:fit-content;max-width:100%;margin:14px 0 0;padding:8px 10px 8px 14px;background:#f7f6f2;border:1px solid #e7e4dc;border-radius:12px;font-size:13px;color:#4b5563}
+  .dc-logo{display:inline-flex;align-items:center;gap:7px;color:#0d1626;text-decoration:none;font:800 19px/1 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.03em}
+  .dc-logo svg{width:32px;height:15px;flex:none}
+  .dc-redes{display:inline-flex;align-items:center;gap:2px;flex-wrap:wrap}
+  .dc-redes a{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;border-radius:8px;color:#0d1626;text-decoration:none}
+  .dc-redes a:hover,.dc-redes a:focus-visible{background:#ebe8df}
+  .dc-redes svg{width:18px;height:18px}
+  .dc-handle{font-weight:700;color:#0d1626;margin-right:2px}
+  .dc-redes a.dc-web{padding:0 8px;font-weight:600;font-size:13px}
 </style>
 </head>
 <body>
 <header>
   <h1>Recorridos <span>Media Maratón del Cauca</span></h1>
   <p class="sub">Popayán · Salida y llegada en el Parque Caldas · Elige tu distancia, recorre el mapa paso a paso y descarga el GPX para tu reloj.</p>
+  <div class="colab">
+    <span>Desarrollado en colaboración por</span>
+    <a class="dc-logo" href="https://www.datecuenta.app" target="_blank" rel="noopener" aria-label="datecuenta (abre www.datecuenta.app)">
+      <svg viewBox="13 32 70 32" aria-hidden="true"><line x1="16" y1="48" x2="80" y2="48" stroke="#0d1626" stroke-width="5" stroke-linecap="round"/><circle cx="34" cy="48" r="13" fill="#0d1626"/><circle cx="64" cy="48" r="13" fill="#fd923e" stroke="#0d1626" stroke-width="3"/></svg><span aria-hidden="true">datecuenta</span>
+    </a>
+    <span class="dc-redes">
+      <span class="dc-handle">@datecuentaapp</span>
+      <a href="https://www.tiktok.com/@datecuentaapp" target="_blank" rel="noopener" aria-label="TikTok de @datecuentaapp" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-2.59-2.6c.27 0 .53.04.77.12V9.77a5.7 5.7 0 0 0-.77-.05A5.68 5.68 0 1 0 15.54 15.4V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.3 4.3 0 0 1-3.24-1.48z"/></svg></a>
+      <a href="https://www.instagram.com/datecuentaapp/" target="_blank" rel="noopener" aria-label="Instagram de @datecuentaapp" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+      <a class="dc-web" href="https://www.datecuenta.app" target="_blank" rel="noopener">www.datecuenta.app</a>
+    </span>
+  </div>
 </header>
 <div class="wrap">
   <div class="tabs" id="tabs"></div>
@@ -72,7 +97,7 @@
     <div><b>Apple Watch</b><ol><li>Descarga el GPX.</li><li>Ábrelo con WorkOutDoors o Footpath (apps de terceros).</li><li>Envíalo al reloj desde la app.</li></ol></div>
   </div>
 </div>
-<footer>Mapa © OpenStreetMap contribuyentes · Leaflet</footer>
+<footer>Mapa © OpenStreetMap contribuyentes · Leaflet · Desarrollado en colaboración por <a href="https://www.datecuenta.app" target="_blank" rel="noopener">@datecuentaapp</a></footer>
 <script>
 /*__DATA__*/
 const map = L.map('map', {scrollWheelZoom: true});
