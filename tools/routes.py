@@ -71,4 +71,9 @@ if __name__ == '__main__':
     json.dump(fc, open(f'{OUT}/preview/routes.geojson', 'w'))
     html = open(TEMPLATE, encoding='utf-8').read().replace('/*__DATA__*/', 'const DATA = ' + json.dumps(data, ensure_ascii=False) + ';')
     open(f'{OUT}/mapa.html', 'w', encoding='utf-8').write(html)
+    # copia para Vercel: public/index.html + GPX
+    os.makedirs(f'{OUT}/public', exist_ok=True)
+    open(f'{OUT}/public/index.html', 'w', encoding='utf-8').write(html)
+    import shutil
+    for R in ROUTES: shutil.copy(f"{OUT}/{R['file']}", f"{OUT}/public/{R['file']}")
     print('wrote', [R['file'] for R in ROUTES], 'and mapa.html')

@@ -16,3 +16,14 @@ python3 -m venv venv && ./venv/bin/pip install networkx
 ```
 
 Escribe `media-maraton-cauca-<distancia>.gpx` y `mapa.html` en la carpeta `ruta/`, y `preview/routes.geojson` para la página de verificación `preview/index.html`.
+
+## Publicar en Vercel
+
+La carpeta `public/` es el sitio estático que Vercel sirve (`index.html` es `mapa.html` y los tres GPX van al lado). `tools/routes.py` la regenera. `.vercelignore` deja por fuera `tools/`, `referencia/` y `preview/`.
+
+```bash
+npx vercel login
+npx vercel --prod
+```
+
+La primera vez el CLI pregunta el nombre del proyecto y la configuración: aceptar los valores por defecto (framework "Other", sin build). Cada `npx vercel --prod` posterior publica los cambios.
