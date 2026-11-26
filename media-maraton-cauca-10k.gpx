@@ -3,19 +3,19 @@
   <metadata>
     <name>Media Maratón del Cauca - 10K</name>
     <desc>Recorrido 10K (aprox.) Media Maratón del Cauca, Popayán. Salida y llegada en el Parque Caldas. Trazado sobre OpenStreetMap a partir del mapa oficial publicado; sujeto a modificaciones.</desc>
-    <time>2026-11-25T23:27:38Z</time>
+    <time>2026-11-26T00:01:27Z</time>
   </metadata>
   <wpt lat="2.442198" lon="-76.605692"><name>Salida / Llegada - Parque Caldas</name></wpt>
   <wpt lat="2.445497" lon="-76.607418"><name>Km 1</name></wpt>
   <wpt lat="2.444505" lon="-76.602957"><name>Km 2</name></wpt>
-  <wpt lat="2.448498" lon="-76.598070"><name>Km 3</name></wpt>
-  <wpt lat="2.441656" lon="-76.602022"><name>Km 4</name></wpt>
-  <wpt lat="2.441183" lon="-76.609014"><name>Km 5</name></wpt>
-  <wpt lat="2.437123" lon="-76.611921"><name>Km 6</name></wpt>
-  <wpt lat="2.442596" lon="-76.615094"><name>Km 7</name></wpt>
-  <wpt lat="2.447596" lon="-76.613516"><name>Km 8</name></wpt>
-  <wpt lat="2.446151" lon="-76.609108"><name>Km 9</name></wpt>
-  <wpt lat="2.441373" lon="-76.606058"><name>Km 10</name></wpt>
+  <wpt lat="2.447556" lon="-76.598577"><name>Km 3</name></wpt>
+  <wpt lat="2.444212" lon="-76.601151"><name>Km 4</name></wpt>
+  <wpt lat="2.440498" lon="-76.606516"><name>Km 5</name></wpt>
+  <wpt lat="2.435321" lon="-76.611295"><name>Km 6</name></wpt>
+  <wpt lat="2.440917" lon="-76.614167"><name>Km 7</name></wpt>
+  <wpt lat="2.445194" lon="-76.614443"><name>Km 8</name></wpt>
+  <wpt lat="2.448798" lon="-76.608930"><name>Km 9</name></wpt>
+  <wpt lat="2.442167" lon="-76.608613"><name>Km 10</name></wpt>
   <trk>
     <name>Media Maratón del Cauca - 10K</name>
     <trkseg>
@@ -102,17 +102,41 @@
       <trkpt lat="2.446575" lon="-76.599600"></trkpt>
       <trkpt lat="2.446566" lon="-76.599555"></trkpt>
       <trkpt lat="2.446572" lon="-76.599501"></trkpt>
+      <trkpt lat="2.446752" lon="-76.599546"></trkpt>
+      <trkpt lat="2.446776" lon="-76.599626"></trkpt>
+      <trkpt lat="2.446829" lon="-76.599707"></trkpt>
+      <trkpt lat="2.446920" lon="-76.599797"></trkpt>
+      <trkpt lat="2.447014" lon="-76.599861"></trkpt>
+      <trkpt lat="2.447112" lon="-76.599907"></trkpt>
+      <trkpt lat="2.447214" lon="-76.599927"></trkpt>
+      <trkpt lat="2.447314" lon="-76.599929"></trkpt>
+      <trkpt lat="2.447415" lon="-76.599913"></trkpt>
+      <trkpt lat="2.447947" lon="-76.599053"></trkpt>
+      <trkpt lat="2.447956" lon="-76.598932"></trkpt>
+      <trkpt lat="2.447915" lon="-76.598815"></trkpt>
+      <trkpt lat="2.447859" lon="-76.598729"></trkpt>
+      <trkpt lat="2.447784" lon="-76.598649"></trkpt>
+      <trkpt lat="2.447648" lon="-76.598591"></trkpt>
+      <trkpt lat="2.447518" lon="-76.598571"></trkpt>
+      <trkpt lat="2.447648" lon="-76.598591"></trkpt>
+      <trkpt lat="2.447784" lon="-76.598649"></trkpt>
+      <trkpt lat="2.447859" lon="-76.598729"></trkpt>
+      <trkpt lat="2.447915" lon="-76.598815"></trkpt>
+      <trkpt lat="2.447956" lon="-76.598932"></trkpt>
+      <trkpt lat="2.447947" lon="-76.599053"></trkpt>
+      <trkpt lat="2.447415" lon="-76.599913"></trkpt>
+      <trkpt lat="2.447314" lon="-76.599929"></trkpt>
+      <trkpt lat="2.447214" lon="-76.599927"></trkpt>
+      <trkpt lat="2.447112" lon="-76.599907"></trkpt>
+      <trkpt lat="2.447014" lon="-76.599861"></trkpt>
+      <trkpt lat="2.446920" lon="-76.599797"></trkpt>
+      <trkpt lat="2.446829" lon="-76.599707"></trkpt>
+      <trkpt lat="2.446776" lon="-76.599626"></trkpt>
+      <trkpt lat="2.446752" lon="-76.599546"></trkpt>
+      <trkpt lat="2.446572" lon="-76.599501"></trkpt>
       <trkpt lat="2.446598" lon="-76.599430"></trkpt>
       <trkpt lat="2.447079" lon="-76.598602"></trkpt>
       <trkpt lat="2.447249" lon="-76.598224"></trkpt>
-      <trkpt lat="2.447314" lon="-76.598061"></trkpt>
-      <trkpt lat="2.447361" lon="-76.598053"></trkpt>
-      <trkpt lat="2.447392" lon="-76.598053"></trkpt>
-      <trkpt lat="2.448069" lon="-76.598049"></trkpt>
-      <trkpt lat="2.448730" lon="-76.598081"></trkpt>
-      <trkpt lat="2.448069" lon="-76.598049"></trkpt>
-      <trkpt lat="2.447392" lon="-76.598053"></trkpt>
-      <trkpt lat="2.447361" lon="-76.598053"></trkpt>
       <trkpt lat="2.447314" lon="-76.598061"></trkpt>
       <trkpt lat="2.447242" lon="-76.598023"></trkpt>
       <trkpt lat="2.447208" lon="-76.598127"></trkpt>

@@ -3,7 +3,7 @@
   <metadata>
     <name>Media Maratón del Cauca - 21K</name>
     <desc>Recorrido 21K Media Maratón del Cauca, Popayán. Salida y llegada en el Parque Caldas. Trazado sobre OpenStreetMap a partir del mapa oficial publicado; sujeto a modificaciones.</desc>
-    <time>2026-11-25T23:27:38Z</time>
+    <time>2026-11-26T00:01:28Z</time>
   </metadata>
   <wpt lat="2.442198" lon="-76.605692"><name>Salida / Llegada - Parque Caldas</name></wpt>
   <wpt lat="2.445547" lon="-76.607439"><name>Km 1</name></wpt>
@@ -17,16 +17,17 @@
   <wpt lat="2.456965" lon="-76.590470"><name>Km 9</name></wpt>
   <wpt lat="2.452222" lon="-76.597653"><name>Km 10</name></wpt>
   <wpt lat="2.446787" lon="-76.603811"><name>Km 11</name></wpt>
-  <wpt lat="2.445305" lon="-76.602679"><name>Km 12</name></wpt>
-  <wpt lat="2.448116" lon="-76.598051"><name>Km 13</name></wpt>
-  <wpt lat="2.449759" lon="-76.592978"><name>Km 14</name></wpt>
-  <wpt lat="2.445502" lon="-76.600586"><name>Km 15</name></wpt>
-  <wpt lat="2.442338" lon="-76.604677"><name>Km 16</name></wpt>
-  <wpt lat="2.438577" lon="-76.610008"><name>Km 17</name></wpt>
-  <wpt lat="2.439829" lon="-76.611243"><name>Km 18</name></wpt>
-  <wpt lat="2.443311" lon="-76.613458"><name>Km 19</name></wpt>
-  <wpt lat="2.448931" lon="-76.611092"><name>Km 20</name></wpt>
-  <wpt lat="2.443584" lon="-76.610120"><name>Km 21</name></wpt>
+  <wpt lat="2.446152" lon="-76.603071"><name>Km 12</name></wpt>
+  <wpt lat="2.447665" lon="-76.598598"><name>Km 13</name></wpt>
+  <wpt lat="2.448842" lon="-76.593926"><name>Km 14</name></wpt>
+  <wpt lat="2.448603" lon="-76.594213"><name>Km 15</name></wpt>
+  <wpt lat="2.445127" lon="-76.601771"><name>Km 16</name></wpt>
+  <wpt lat="2.440221" lon="-76.606414"><name>Km 17</name></wpt>
+  <wpt lat="2.435356" lon="-76.611282"><name>Km 18</name></wpt>
+  <wpt lat="2.440910" lon="-76.614130"><name>Km 19</name></wpt>
+  <wpt lat="2.445181" lon="-76.614408"><name>Km 20</name></wpt>
+  <wpt lat="2.448833" lon="-76.608943"><name>Km 21</name></wpt>
+  <wpt lat="2.442179" lon="-76.608649"><name>Km 22</name></wpt>
   <trk>
     <name>Media Maratón del Cauca - 21K</name>
     <trkseg>
@@ -296,12 +297,28 @@
       <trkpt lat="2.443540" lon="-76.605233"></trkpt>
       <trkpt lat="2.443056" lon="-76.605399"></trkpt>
       <trkpt lat="2.442778" lon="-76.604515"></trkpt>
-      <trkpt lat="2.442512" lon="-76.603650"></trkpt>
-      <trkpt lat="2.443362" lon="-76.603354"></trkpt>
-      <trkpt lat="2.443714" lon="-76.603232"></trkpt>
-      <trkpt lat="2.444254" lon="-76.603044"></trkpt>
-      <trkpt lat="2.445408" lon="-76.602643"></trkpt>
-      <trkpt lat="2.445505" lon="-76.602580"></trkpt>
+      <trkpt lat="2.443641" lon="-76.604195"></trkpt>
+      <trkpt lat="2.444538" lon="-76.603860"></trkpt>
+      <trkpt lat="2.444915" lon="-76.603729"></trkpt>
+      <trkpt lat="2.445040" lon="-76.603700"></trkpt>
+      <trkpt lat="2.445195" lon="-76.603642"></trkpt>
+      <trkpt lat="2.445328" lon="-76.603589"></trkpt>
+      <trkpt lat="2.445439" lon="-76.603543"></trkpt>
+      <trkpt lat="2.445518" lon="-76.603510"></trkpt>
+      <trkpt lat="2.445634" lon="-76.603437"></trkpt>
+      <trkpt lat="2.445628" lon="-76.603323"></trkpt>
+      <trkpt lat="2.445660" lon="-76.603213"></trkpt>
+      <trkpt lat="2.445727" lon="-76.603120"></trkpt>
+      <trkpt lat="2.445820" lon="-76.603054"></trkpt>
+      <trkpt lat="2.445930" lon="-76.603023"></trkpt>
+      <trkpt lat="2.446044" lon="-76.603030"></trkpt>
+      <trkpt lat="2.446150" lon="-76.603074"></trkpt>
+      <trkpt lat="2.446227" lon="-76.602966"></trkpt>
+      <trkpt lat="2.446275" lon="-76.602915"></trkpt>
+      <trkpt lat="2.446420" lon="-76.602988"></trkpt>
+      <trkpt lat="2.446275" lon="-76.602915"></trkpt>
+      <trkpt lat="2.445837" lon="-76.602685"></trkpt>
+      <trkpt lat="2.445588" lon="-76.602551"></trkpt>
       <trkpt lat="2.445561" lon="-76.602535"></trkpt>
       <trkpt lat="2.445746" lon="-76.602392"></trkpt>
       <trkpt lat="2.446027" lon="-76.602192"></trkpt>
@@ -317,17 +334,41 @@
       <trkpt lat="2.446575" lon="-76.599600"></trkpt>
       <trkpt lat="2.446566" lon="-76.599555"></trkpt>
       <trkpt lat="2.446572" lon="-76.599501"></trkpt>
+      <trkpt lat="2.446752" lon="-76.599546"></trkpt>
+      <trkpt lat="2.446776" lon="-76.599626"></trkpt>
+      <trkpt lat="2.446829" lon="-76.599707"></trkpt>
+      <trkpt lat="2.446920" lon="-76.599797"></trkpt>
+      <trkpt lat="2.447014" lon="-76.599861"></trkpt>
+      <trkpt lat="2.447112" lon="-76.599907"></trkpt>
+      <trkpt lat="2.447214" lon="-76.599927"></trkpt>
+      <trkpt lat="2.447314" lon="-76.599929"></trkpt>
+      <trkpt lat="2.447415" lon="-76.599913"></trkpt>
+      <trkpt lat="2.447947" lon="-76.599053"></trkpt>
+      <trkpt lat="2.447956" lon="-76.598932"></trkpt>
+      <trkpt lat="2.447915" lon="-76.598815"></trkpt>
+      <trkpt lat="2.447859" lon="-76.598729"></trkpt>
+      <trkpt lat="2.447784" lon="-76.598649"></trkpt>
+      <trkpt lat="2.447648" lon="-76.598591"></trkpt>
+      <trkpt lat="2.447518" lon="-76.598571"></trkpt>
+      <trkpt lat="2.447648" lon="-76.598591"></trkpt>
+      <trkpt lat="2.447784" lon="-76.598649"></trkpt>
+      <trkpt lat="2.447859" lon="-76.598729"></trkpt>
+      <trkpt lat="2.447915" lon="-76.598815"></trkpt>
+      <trkpt lat="2.447956" lon="-76.598932"></trkpt>
+      <trkpt lat="2.447947" lon="-76.599053"></trkpt>
+      <trkpt lat="2.447415" lon="-76.599913"></trkpt>
+      <trkpt lat="2.447314" lon="-76.599929"></trkpt>
+      <trkpt lat="2.447214" lon="-76.599927"></trkpt>
+      <trkpt lat="2.447112" lon="-76.599907"></trkpt>
+      <trkpt lat="2.447014" lon="-76.599861"></trkpt>
+      <trkpt lat="2.446920" lon="-76.599797"></trkpt>
+      <trkpt lat="2.446829" lon="-76.599707"></trkpt>
+      <trkpt lat="2.446776" lon="-76.599626"></trkpt>
+      <trkpt lat="2.446752" lon="-76.599546"></trkpt>
+      <trkpt lat="2.446572" lon="-76.599501"></trkpt>
       <trkpt lat="2.446598" lon="-76.599430"></trkpt>
       <trkpt lat="2.447079" lon="-76.598602"></trkpt>
       <trkpt lat="2.447249" lon="-76.598224"></trkpt>
-      <trkpt lat="2.447314" lon="-76.598061"></trkpt>
-      <trkpt lat="2.447361" lon="-76.598053"></trkpt>
-      <trkpt lat="2.447392" lon="-76.598053"></trkpt>
-      <trkpt lat="2.448069" lon="-76.598049"></trkpt>
-      <trkpt lat="2.448730" lon="-76.598081"></trkpt>
-      <trkpt lat="2.448069" lon="-76.598049"></trkpt>
-      <trkpt lat="2.447392" lon="-76.598053"></trkpt>
-      <trkpt lat="2.447361" lon="-76.598053"></trkpt>
       <trkpt lat="2.447314" lon="-76.598061"></trkpt>
       <trkpt lat="2.447330" lon="-76.597993"></trkpt>
       <trkpt lat="2.447853" lon="-76.595951"></trkpt>
@@ -345,6 +386,16 @@
       <trkpt lat="2.450248" lon="-76.592490"></trkpt>
       <trkpt lat="2.450377" lon="-76.592320"></trkpt>
       <trkpt lat="2.450464" lon="-76.592155"></trkpt>
+      <trkpt lat="2.450517" lon="-76.592050"></trkpt>
+      <trkpt lat="2.450935" lon="-76.590930"></trkpt>
+      <trkpt lat="2.450961" lon="-76.590857"></trkpt>
+      <trkpt lat="2.451035" lon="-76.590880"></trkpt>
+      <trkpt lat="2.451297" lon="-76.590960"></trkpt>
+      <trkpt lat="2.451349" lon="-76.590810"></trkpt>
+      <trkpt lat="2.451297" lon="-76.590960"></trkpt>
+      <trkpt lat="2.451035" lon="-76.590880"></trkpt>
+      <trkpt lat="2.450961" lon="-76.590857"></trkpt>
+      <trkpt lat="2.450935" lon="-76.590930"></trkpt>
       <trkpt lat="2.450517" lon="-76.592050"></trkpt>
       <trkpt lat="2.450464" lon="-76.592155"></trkpt>
       <trkpt lat="2.450377" lon="-76.592320"></trkpt>
@@ -373,48 +424,33 @@
       <trkpt lat="2.446226" lon="-76.599869"></trkpt>
       <trkpt lat="2.446076" lon="-76.600044"></trkpt>
       <trkpt lat="2.445819" lon="-76.600345"></trkpt>
-      <trkpt lat="2.445736" lon="-76.600410"></trkpt>
-      <trkpt lat="2.445549" lon="-76.600555"></trkpt>
-      <trkpt lat="2.445350" lon="-76.600687"></trkpt>
-      <trkpt lat="2.445172" lon="-76.600805"></trkpt>
-      <trkpt lat="2.444841" lon="-76.600959"></trkpt>
-      <trkpt lat="2.444748" lon="-76.601002"></trkpt>
-      <trkpt lat="2.444681" lon="-76.601022"></trkpt>
-      <trkpt lat="2.444623" lon="-76.601040"></trkpt>
-      <trkpt lat="2.444097" lon="-76.601181"></trkpt>
-      <trkpt lat="2.444368" lon="-76.601886"></trkpt>
-      <trkpt lat="2.444416" lon="-76.601935"></trkpt>
-      <trkpt lat="2.444474" lon="-76.601971"></trkpt>
-      <trkpt lat="2.444521" lon="-76.601978"></trkpt>
+      <trkpt lat="2.445646" lon="-76.600551"></trkpt>
+      <trkpt lat="2.445552" lon="-76.600637"></trkpt>
+      <trkpt lat="2.445498" lon="-76.600733"></trkpt>
+      <trkpt lat="2.445465" lon="-76.600846"></trkpt>
+      <trkpt lat="2.445388" lon="-76.600889"></trkpt>
+      <trkpt lat="2.445353" lon="-76.600955"></trkpt>
+      <trkpt lat="2.445357" lon="-76.601030"></trkpt>
+      <trkpt lat="2.445694" lon="-76.601555"></trkpt>
+      <trkpt lat="2.445288" lon="-76.601709"></trkpt>
+      <trkpt lat="2.445060" lon="-76.601796"></trkpt>
+      <trkpt lat="2.444627" lon="-76.601946"></trkpt>
+      <trkpt lat="2.444602" lon="-76.601953"></trkpt>
       <trkpt lat="2.444567" lon="-76.601969"></trkpt>
       <trkpt lat="2.444568" lon="-76.602028"></trkpt>
       <trkpt lat="2.444568" lon="-76.602085"></trkpt>
       <trkpt lat="2.444570" lon="-76.602119"></trkpt>
-      <trkpt lat="2.444620" lon="-76.602142"></trkpt>
-      <trkpt lat="2.444717" lon="-76.602194"></trkpt>
-      <trkpt lat="2.445104" lon="-76.602384"></trkpt>
-      <trkpt lat="2.445505" lon="-76.602580"></trkpt>
-      <trkpt lat="2.445541" lon="-76.602596"></trkpt>
-      <trkpt lat="2.445798" lon="-76.602733"></trkpt>
-      <trkpt lat="2.446227" lon="-76.602966"></trkpt>
-      <trkpt lat="2.446150" lon="-76.603074"></trkpt>
-      <trkpt lat="2.446044" lon="-76.603030"></trkpt>
-      <trkpt lat="2.445930" lon="-76.603023"></trkpt>
-      <trkpt lat="2.445820" lon="-76.603054"></trkpt>
-      <trkpt lat="2.445727" lon="-76.603120"></trkpt>
-      <trkpt lat="2.445660" lon="-76.603213"></trkpt>
-      <trkpt lat="2.445628" lon="-76.603323"></trkpt>
-      <trkpt lat="2.445634" lon="-76.603437"></trkpt>
-      <trkpt lat="2.445518" lon="-76.603510"></trkpt>
-      <trkpt lat="2.445439" lon="-76.603543"></trkpt>
-      <trkpt lat="2.445328" lon="-76.603589"></trkpt>
-      <trkpt lat="2.445195" lon="-76.603642"></trkpt>
-      <trkpt lat="2.445040" lon="-76.603700"></trkpt>
-      <trkpt lat="2.444915" lon="-76.603729"></trkpt>
-      <trkpt lat="2.444538" lon="-76.603860"></trkpt>
-      <trkpt lat="2.443641" lon="-76.604195"></trkpt>
-      <trkpt lat="2.442778" lon="-76.604515"></trkpt>
-      <trkpt lat="2.441904" lon="-76.604837"></trkpt>
+      <trkpt lat="2.444442" lon="-76.602077"></trkpt>
+      <trkpt lat="2.444340" lon="-76.602068"></trkpt>
+      <trkpt lat="2.443957" lon="-76.602171"></trkpt>
+      <trkpt lat="2.443515" lon="-76.602325"></trkpt>
+      <trkpt lat="2.443097" lon="-76.602475"></trkpt>
+      <trkpt lat="2.442229" lon="-76.602782"></trkpt>
+      <trkpt lat="2.442190" lon="-76.602795"></trkpt>
+      <trkpt lat="2.441362" lon="-76.603083"></trkpt>
+      <trkpt lat="2.440489" lon="-76.603371"></trkpt>
+      <trkpt lat="2.440724" lon="-76.604116"></trkpt>
+      <trkpt lat="2.440768" lon="-76.604256"></trkpt>
       <trkpt lat="2.441046" lon="-76.605141"></trkpt>
       <trkpt lat="2.441325" lon="-76.606017"></trkpt>
       <trkpt lat="2.440440" lon="-76.606332"></trkpt>

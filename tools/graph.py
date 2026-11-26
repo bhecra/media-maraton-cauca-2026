@@ -40,6 +40,26 @@ def load():
         if nn:
             streets.setdefault(nn, set()).update(ids)
     for n in G.nodes: G.nodes[n]['ll'] = nodes[n]
+    # extra ways not tagged as highway (e.g. the Tulcán running track), connected to the nearest street node
+    extra = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'osm', 'extra.json')
+    if os.path.exists(extra):
+        street_nodes = list(G.nodes)
+        for w in json.load(open(extra))['elements']:
+            name = w.get('tags', {}).get('name') or 'Pista Tulcán'
+            pts = [(p['lat'], p['lon']) for p in w['geometry']]
+            ids = [f"x{w['id']}_{i}" for i in range(len(pts))]
+            for i, (a, b) in enumerate(zip(ids, ids[1:])):
+                G.add_edge(a, b, length=hav(pts[i], pts[i+1]), name=name, hw='track')
+            for i, n in enumerate(ids): G.nodes[n]['ll'] = pts[i]
+            # connect the two closest pairs (track node, street node) within 90 m
+            pairs = sorted(((hav(pts[i], G.nodes[s]['ll']), ids[i], s) for i in range(len(pts)) for s in street_nodes
+                            if abs(G.nodes[s]['ll'][0]-pts[i][0]) < 0.001 and abs(G.nodes[s]['ll'][1]-pts[i][1]) < 0.001))
+            used = set()
+            for d, a, s in pairs:
+                if d > 90 or len(used) >= 2: break
+                if a in used: continue
+                G.add_edge(a, s, length=d, name='', hw='path'); used.add(a)
+            streets.setdefault(norm(name), set()).update(ids)
     return G, streets
 
 def intersections(streets, G, s1, s2):

@@ -18,8 +18,9 @@ R5 = [
     ("Carrera 6", "Calle 5"),
 ]
 
-# Centro Deportivo Universitario Tulcán: Cra 3, Calle 10N y ida y vuelta por Calle 15N hasta el puente sobre el Río Molino
-TULCAN = [("Carrera 3", "Calle 10N"), ("Carrera 2", "Calle 15N"), (2.44880, -76.59808), ("Carrera 2", "Calle 15N")]
+# Centro Deportivo Universitario Tulcán: Cra 3, Calle 10N y una vuelta a la pista atlética (en el sentido de las manecillas), salida por Cra 2
+TULCAN = [("Carrera 3", "Calle 10N"), (2.44675, -76.59955), (2.44731, -76.59993), (2.44796, -76.59893), (2.44752, -76.59857),
+          (2.44675, -76.59955), ("Carrera 2", "Calle 15N")]
 # Circuito sur-occidental compartido por 10K y 21K: Cra 9 sur, Calle 13, Cra 10A, Benito Juárez, Calle 8, Cra 17,
 # desvío Calle 5A / Cra 14 / Calle 4, Cra 17 norte, Transversal 9N, Cra 11 sur, Calle 5 hasta el Parque Caldas
 SUR = [("Carrera 9", "Calle 7"), ("Carrera 9", "Calle 13"), ("Carrera 10A", "Calle 13"), ("Carrera 10A", "Calle 8"),
@@ -32,16 +33,16 @@ R10 = R5[:11] + TULCAN + [("Carrera 2", "Calle 7"), ("Carrera 2", "Calle 3"), ("
        ("Carrera 5", "Calle 4"), ("Carrera 5", "Calle 6"), ("Carrera 6", "Calle 6"), ("Carrera 9", "Calle 6")] + SUR
 
 # 21K: Calle 4, Cra 11, Calle 1, Cra 9 norte, Avenida Carrera 9 hasta Transversal 7 (km 6), regreso por Carrera 6
-#      hasta el Humilladero, Calle 3, Cra 4, Tulcán, Cra 2 hasta Tránsito (ida y vuelta), Cra 2, Calle 7, Cra 5,
-#      Calle 5, Cra 6, Calle 7, circuito sur
+#      hasta el Humilladero (km 11), Calle 3, Cra 5 (puente), Calle 7, Cra 4, Cra 3, vuelta a la pista de Tulcán (km 12),
+#      Cra 2 hasta las oficinas de Tránsito (km 14) y regreso, Cra 3 al sur, Calle 5, Cra 6, Calle 7, circuito sur
 R21 = [("Carrera 6", "Calle 4"), ("Carrera 11", "Calle 4"), ("Carrera 11", "Calle 1"), ("Carrera 9", "Calle 1"),
        (2.45040, -76.60557), (2.45536, -76.59742), ("Avenida Carrera 9", "Calle 27N"),
        ("Avenida Carrera 9", "Calle 35N"), ("Avenida Carrera 9", "Transversal 7"), (2.47437, -76.57797),
        ("Carrera 6", "Calle 48N"), ("Carrera 6", "Calle 35N"), ("Carrera 6", "Calle 25"), ("Carrera 6", "Calle 15N"),
-       ("Carrera 6", "Calle 9"), ("Carrera 6", "Calle 1N"), ("Carrera 6", "Calle 3"), ("Carrera 4", "Calle 3"),
-       ("Carrera 4", "Calle 7"), ("Carrera 4", "Calle 3N"), ("Carrera 3", "Calle 3N")] + TULCAN + [
-       ("Carrera 2", "Calle 21Bn"), ("Carrera 2", "Calle 15N"), ("Carrera 2", "Calle 7"), ("Carrera 5", "Calle 7"),
-       ("Carrera 5", "Calle 5"), ("Carrera 6", "Calle 5"), ("Carrera 6", "Calle 7")] + SUR
+       ("Carrera 6", "Calle 9"), ("Carrera 6", "Calle 1N"), ("Carrera 6", "Calle 3"), (2.44278, -76.60451),
+       (2.44642, -76.60299), ("Carrera 4", "Calle 7"), ("Carrera 4", "Calle 3N"), ("Carrera 3", "Calle 3N")] + TULCAN + [
+       (2.45120, -76.59080), ("Carrera 2", "Calle 15N"), ("Carrera 3", "Calle 2N"), ("Carrera 3", "Calle 1"),
+       ("Carrera 3", "Calle 5"), ("Carrera 6", "Calle 5"), ("Carrera 6", "Calle 7")] + SUR
 
 ROUTES = [
     {'key': '5K', 'name': 'Media Maratón del Cauca - 5K', 'file': 'media-maraton-cauca-5k.gpx', 'wps': R5,
